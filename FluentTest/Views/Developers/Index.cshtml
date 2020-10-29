@@ -1,0 +1,48 @@
+﻿@model IEnumerable<FluentTest.Models.Developer>
+@{
+    ViewBag.Title = "IndexView";
+}
+
+<h2>IndexView</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(s => @item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(s => @item.FirstName) @Html.DisplayFor(s => @item.LastName)
+            </td>
+            <td>
+                Friends:
+                <ul>
+                    @foreach (var iter in item.Friends)
+                    {
+                        <li>@iter.FirstName @iter.LastName id:@iter.ID</li>
+                    }
+                </ul>
+            </td>
+            <td>
+                @Html.ActionLink("Add Friend", "AddFriend", new { id = item.ID }) |
+                @Html.ActionLink("View Feed", "ViewFeed", new { id = item.ID }) |
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
