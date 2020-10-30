@@ -13,8 +13,10 @@ namespace FluentTest.Models
     {
         public Developer()
         {
-            Friends = new List<User>();
-            Posts = new List<Post>();
+            //Friends = new List<User>();
+            //Requests = new List<User>();
+            //Posts = new List<Post>();
+            
         }
     }
 }

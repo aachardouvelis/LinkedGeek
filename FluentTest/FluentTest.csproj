@@ -139,9 +139,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202010231232046_CHANGES.cs" />
-    <Compile Include="Migrations\202010231232046_CHANGES.designer.cs">
-      <DependentUpon>202010231232046_CHANGES.cs</DependentUpon>
+    <Compile Include="Migrations\202010300750568_s.cs" />
+    <Compile Include="Migrations\202010300750568_s.designer.cs">
+      <DependentUpon>202010300750568_s.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Company.cs" />
@@ -196,6 +196,7 @@
     <Content Include="Views\Developers\Index.cshtml" />
     <Content Include="Views\Developers\ViewFeed.cshtml" />
     <Content Include="Views\Developers\AddFriend.cshtml" />
+    <Content Include="Views\Developers\Network.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -214,8 +215,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010231232046_CHANGES.resx">
-      <DependentUpon>202010231232046_CHANGES.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010300750568_s.resx">
+      <DependentUpon>202010300750568_s.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

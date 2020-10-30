@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\FluentTest",
+    "\\FluentTest\\Controllers",
+    "\\FluentTest\\Views",
+    "\\FluentTest\\Views\\Developers"
   ],
+  "SelectedNode": "\\FluentTest\\Views\\Developers\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

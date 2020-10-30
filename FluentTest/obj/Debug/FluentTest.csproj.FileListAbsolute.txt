@@ -345,9 +345,9 @@ C:\Users\Alex\Source\Repos\giwrgoskai1988\FinalProject\FluentTest\bin\Newtonsoft
 C:\Users\Alex\Source\Repos\giwrgoskai1988\FinalProject\FluentTest\bin\Antlr3.Runtime.pdb
 C:\Users\Alex\Source\Repos\giwrgoskai1988\FinalProject\FluentTest\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Alex\Source\Repos\giwrgoskai1988\FinalProject\FluentTest\obj\Debug\FluentTest.csprojAssemblyReference.cache
-C:\Users\Alex\Source\Repos\giwrgoskai1988\FinalProject\FluentTest\obj\Debug\FluentTest.Migrations.CHANGES.resources
-C:\Users\Alex\Source\Repos\giwrgoskai1988\FinalProject\FluentTest\obj\Debug\FluentTest.csproj.GenerateResource.cache
 C:\Users\Alex\Source\Repos\giwrgoskai1988\FinalProject\FluentTest\obj\Debug\FluentTest.csproj.CoreCompileInputs.cache
 C:\Users\Alex\Source\Repos\giwrgoskai1988\FinalProject\FluentTest\obj\Debug\FluentTest.csproj.CopyComplete
 C:\Users\Alex\Source\Repos\giwrgoskai1988\FinalProject\FluentTest\obj\Debug\FluentTest.dll
 C:\Users\Alex\Source\Repos\giwrgoskai1988\FinalProject\FluentTest\obj\Debug\FluentTest.pdb
+C:\Users\Alex\source\repos\giwrgoskai1988\FinalProject\FluentTest\obj\Debug\FluentTest.Migrations.s.resources
+C:\Users\Alex\source\repos\giwrgoskai1988\FinalProject\FluentTest\obj\Debug\FluentTest.csproj.GenerateResource.cache

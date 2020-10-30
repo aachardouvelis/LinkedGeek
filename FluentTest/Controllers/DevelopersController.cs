@@ -19,7 +19,7 @@ namespace FluentTest.Controllers
         // GET: Developers
         public ActionResult Index()
         {
-            var Developers = db.Developers.Include(i => i.Friends).ToList();
+            var Developers = db.Developers.Include(i => i.Friends).Include(i=>i.Posts).ToList();
            
             
             return View(Developers);
@@ -106,7 +106,7 @@ namespace FluentTest.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name")] Developer developer)
+        public ActionResult Create([Bind(Include = "ID,FirstName,LastName,Email,Password")] Developer developer)
         {
             if (ModelState.IsValid)
             {

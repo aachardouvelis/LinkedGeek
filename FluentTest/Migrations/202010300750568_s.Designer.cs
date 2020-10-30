@@ -7,13 +7,13 @@ namespace FluentTest.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class CHANGES : IMigrationMetadata
+    public sealed partial class s : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CHANGES));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(s));
         
         string IMigrationMetadata.Id
         {
-            get { return "202010231232046_CHANGES"; }
+            get { return "202010300750568_s"; }
         }
         
         string IMigrationMetadata.Source

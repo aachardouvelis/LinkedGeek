@@ -14,9 +14,9 @@ namespace FluentTest.Models
         public virtual IList<Job> Jobs { get; set; }
         public Company()
         {
-            Friends = new List<User>();
-            Posts = new List<Post>();
-            Jobs = new List<Job>();
+            //Friends = new List<User>();
+            //Requests = new List<User>();
+            //Posts = new List<Post>();
         }
 
 
