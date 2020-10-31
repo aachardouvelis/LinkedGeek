@@ -1,7 +1,88 @@
-﻿
+﻿@model IEnumerable<FluentTest.Models.Developer>
 @{
     ViewBag.Title = "Network";
 }
 
 <h2>Network</h2>
 
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <span class="row"></span>
+            <span class="row"></span>
+            <span class="row"></span>
+            <span class="row"></span>
+            <span class="row"></span>
+            <span class="row"></span>
+            <span class="row"></span>
+            <span class="row"></span>
+            <span class="row"></span>
+            
+            <div class="list-group">
+                @Html.ActionLink("Connections", "Index", "Developers", null, new { @class = "list-group-item active" })
+                <a class="list-group-item">
+                    Connections
+                </a>
+                <a class="list-group-item">
+                    Events
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-9">
+
+            <div>
+                <div class="row">
+                    <h3 class="col-md-5">@Model.Count() Connections</h3>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5">
+                        <div name="sortOrder" class="dropdown">
+                            <label>sorty by:</label>
+
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                Last Name
+                                <span class="caret"></span>
+                            </button>
+                            <ul name="sortOrder" class="dropdown-menu">
+                                <li><a href="#">Last Name</a></li>
+                                <li><a href="#">First Name</a></li>
+                                <li><a href="#">Recently Added</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    @*<div class="col-md-6 "></div>*@
+                    <div class="col-md-4 ">
+                        @Html.TextBox("searchString", "")
+                        @Html.ActionLink(" ", "Developers",
+                            null,
+                            new { @class = "btn btn-sm btn-danger glyphicon glyphicon-search" }
+                       )
+
+                    </div>
+                </div>
+            </div>
+            <span class="row"></span>
+            <div class="list-group col-md-9">
+                @foreach (var dev in Model)
+                {
+                    <div class="list-group-item row">
+                        <div class="col-md-2">
+                            <a href="@Url.Action("Details","Developers",new { id = dev.ID })"><img src="~/Images/user.png" style="height:70px;" /></a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="@Url.Action("Details","Developers",new { id = dev.ID })">
+                                <h4>@dev.FirstName @dev.LastName</h4>
+                            </a>
+                                <p>@dev.CurrentPosition</p>
+            </div>
+                        
+                    </div>
+                }
+
+            </div>
+
+
+        </div>
+    </div>
+</div>

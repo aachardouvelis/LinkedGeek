@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class s : DbMigration
+    public partial class v1 : DbMigration
     {
         public override void Up()
         {
@@ -87,6 +87,7 @@
                 c => new
                     {
                         ID = c.Int(nullable: false),
+                        CurrentPosition = c.String(),
                     })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.Users", t => t.ID)

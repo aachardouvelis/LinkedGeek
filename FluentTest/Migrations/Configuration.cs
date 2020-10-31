@@ -23,6 +23,8 @@
                 {
                     FirstName="Alex",
                     LastName="Chardouvelis",
+                    CurrentPosition="Front End Software Engineer at PALIATSOS A.E.",
+                    //BirthDate=new DateTime(1993,10,03,0,0,0),
                     Posts=new List<Post>{
                         new Post
                         {
@@ -46,6 +48,8 @@
 
                     FirstName="Alex",
                     LastName="Mavridis",
+                    CurrentPosition="Software Engineer at Pfizer",
+                    //BirthDate=new DateTime(1996,11,05,0,0,0),
                     Posts=new List<Post>{
                         new Post
                         {
@@ -56,7 +60,8 @@
                 },
             new Developer
                 {
-
+                    CurrentPosition="Full Stack Dev",
+                    //BirthDate=new DateTime(1999,2,12,0,0,0),
                     FirstName="George",
                     LastName="Dermetzis"
                 },
@@ -64,6 +69,8 @@
                 {
                     FirstName="George",
                     LastName="Nikolakeas",
+                    CurrentPosition="AI scientist at Imperial, University of London",
+                    //BirthDate=new DateTime(2002,11,11,0,0,0),
                     Posts=new List<Post>{
                         new Post
                         {

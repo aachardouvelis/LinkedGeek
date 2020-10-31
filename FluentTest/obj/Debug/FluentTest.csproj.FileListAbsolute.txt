@@ -349,5 +349,5 @@ C:\Users\Alex\Source\Repos\giwrgoskai1988\FinalProject\FluentTest\obj\Debug\Flue
 C:\Users\Alex\Source\Repos\giwrgoskai1988\FinalProject\FluentTest\obj\Debug\FluentTest.csproj.CopyComplete
 C:\Users\Alex\Source\Repos\giwrgoskai1988\FinalProject\FluentTest\obj\Debug\FluentTest.dll
 C:\Users\Alex\Source\Repos\giwrgoskai1988\FinalProject\FluentTest\obj\Debug\FluentTest.pdb
-C:\Users\Alex\source\repos\giwrgoskai1988\FinalProject\FluentTest\obj\Debug\FluentTest.Migrations.s.resources
+C:\Users\Alex\source\repos\giwrgoskai1988\FinalProject\FluentTest\obj\Debug\FluentTest.Migrations.v1.resources
 C:\Users\Alex\source\repos\giwrgoskai1988\FinalProject\FluentTest\obj\Debug\FluentTest.csproj.GenerateResource.cache

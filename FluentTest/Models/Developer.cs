@@ -18,5 +18,9 @@ namespace FluentTest.Models
             //Posts = new List<Post>();
             
         }
+
+        //[DataType(DataType.Date)]
+        //public DateTime BirthDate { get; set; }
+        public String CurrentPosition { get; set; }
     }
 }

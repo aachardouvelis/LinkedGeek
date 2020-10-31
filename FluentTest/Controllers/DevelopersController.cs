@@ -25,7 +25,14 @@ namespace FluentTest.Controllers
             return View(Developers);
             //return View(db.Developers.ToList());
         }
-        
+
+        public ActionResult Network(int? id)
+        {
+
+            var Developers = db.Developers.Include(i => i.Friends).Include(i => i.Posts).ToList();
+            return View(Developers); 
+        }
+
         public ActionResult AddFriend(int? id)
         {
 
