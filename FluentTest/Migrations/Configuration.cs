@@ -104,14 +104,14 @@
                 //        //dev.AddFriend(friend2);
                 //        //dev.AddFriend(friend3);
 
-                dev.Friends.Add(friend);
-                friend.Friends.Add(dev);
+                dev.DeveloperFollows.Add(friend);
+                friend.DeveloperFollows.Add(dev);
 
-                dev.Friends.Add(friend2);
-                friend2.Friends.Add(dev);
+                dev.DeveloperFollows.Add(friend2);
+                friend2.DeveloperFollows.Add(dev);
 
-                dev.Friends.Add(friend3);
-                friend3.Friends.Add(dev);
+                dev.DeveloperFollows.Add(friend3);
+                friend3.DeveloperFollows.Add(dev);
 
             }
 

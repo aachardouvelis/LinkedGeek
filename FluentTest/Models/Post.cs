@@ -15,7 +15,7 @@ namespace FluentTest.Models
 
         public string Content { get; set; }
 
-        public virtual User User { get; set; }
+        public User User { get; set; }
 
 
     }

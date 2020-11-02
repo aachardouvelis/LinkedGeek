@@ -2,10 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 
 namespace FluentTest.Models
@@ -20,10 +17,7 @@ namespace FluentTest.Models
         //[NotMapped]
         //public HttpPostedFileBase Image { get; set; }
 
-        [StringLength(50)]
-        public string FirstName { get; set; }
-        [StringLength(50)]
-        public string LastName { get; set; }
+        
 
         [StringLength(50)]
         [EmailAddress]
@@ -33,37 +27,54 @@ namespace FluentTest.Models
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        private IList<User> _Friends;
-        private IList<User> _Requests;
+        private IList<Company> _CompanyFollows;
+        
+        //private IList<User> _Friends;
+        //private IList<User> _Requests;
         private IList<Post> _Posts;
-        public virtual IList<User> Friends
+            
+        public IList<Company> CompanyFollows
         {
-            //get;set;
             get
             {
-                if (_Friends == null)
-                    _Friends = new List<User>();
-                return _Friends;
+                if (_CompanyFollows == null)
+                    _CompanyFollows = new List<Company>();
+                return _CompanyFollows;
             }
             set
             {
-                _Friends = value;
+                _CompanyFollows = value;
             }
         }
-        public virtual IList<User> Requests
-        {
-            //get; set;
-            get
-            {
-                if (_Requests == null)
-                    _Requests = new List<User>();
-                return _Requests;
-            }
-            set
-            {
-                _Requests = value;
-            }
-        }
+
+        //public virtual IList<User> Friends
+        //{
+        //    //get;set;
+        //    get
+        //    {
+        //        if (_Friends == null)
+        //            _Friends = new List<User>();
+        //        return _Friends;
+        //    }
+        //    set
+        //    {
+        //        _Friends = value;
+        //    }
+        //}
+        //public virtual IList<User> Requests
+        //{
+        //    //get; set;
+        //    get
+        //    {
+        //        if (_Requests == null)
+        //            _Requests = new List<User>();
+        //        return _Requests;
+        //    }
+        //    set
+        //    {
+        //        _Requests = value;
+        //    }
+        //}
         public virtual IList<Post> Posts
         {
             //get; set;
@@ -73,36 +84,27 @@ namespace FluentTest.Models
                     _Posts = new List<Post>();
                 return _Posts;
             }
-            set 
+            set
             {
                 _Posts = value;
             }
         }
 
-
-        public bool AddFriend(User friend)
+        public String CurrentPosition { get; set; }
+        public bool Follow(Company company)
         {
-            if (!Friends.Any(x => x.ID == friend.ID))
+            if (!CompanyFollows.Any(x => x.ID == company.ID))
             {
-                Friends.Add(friend);
-                friend.Friends.Add(this);
+                CompanyFollows.Add(company);
                 return true;
             }
             return false;
         }
 
-        public bool RequestFriend(User friend)
-        {
-            if (friend.Requests.Any(f => f.ID == friend.ID))
-                return false;
-
-            friend.Requests.Add(this);
-            return true;
-        }
-
-        public void Delete() => Friends.ForEach(F => F.RemoveFriend(this));
+        
+       // public void Delete() =>
 
 
-        public void RemoveFriend(User friend) => Friends = Friends.Where(F => F.ID != friend.ID).ToList();
+        public void Unfollow(Company Company) => CompanyFollows=CompanyFollows.Where(F => F.ID != Company.ID).ToList();
     }
 }

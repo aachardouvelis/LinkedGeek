@@ -28,7 +28,7 @@
             <td>
                 Friends:
                 <ul>
-                    @foreach (var iter in item.Friends)
+                    @foreach (var iter in item.DeveloperFollows)
                     {
                         <li>@iter.FirstName @iter.LastName id:@iter.ID</li>
                     }

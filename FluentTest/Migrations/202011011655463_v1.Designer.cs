@@ -13,7 +13,7 @@ namespace FluentTest.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202010301456328_v1"; }
+            get { return "202011011655463_v1"; }
         }
         
         string IMigrationMetadata.Source

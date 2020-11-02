@@ -21,14 +21,28 @@ namespace FluentTest.DAL
         {
 
             modelBuilder.Entity<User>()
-            .HasMany(D => D.Friends)
+            .HasMany(D => D.CompanyFollows)
             .WithMany()
             .Map(m =>
             {
-                m.MapLeftKey("Dev_ID");
-                m.MapRightKey("Friend_ID");
-                m.ToTable("User_Friends");
+                m.MapLeftKey("User_ID");
+                m.MapRightKey("Company_ID");
+                m.ToTable("CompanyFollows");
             });
+
+            modelBuilder.Entity<Developer>()
+            .HasMany(D => D.DeveloperFollows)
+            .WithMany()
+            .Map(m =>
+            {
+                m.MapLeftKey("Developer_ID");
+                m.MapRightKey("Developer2_ID");
+                m.ToTable("DeveloperFollows");
+            });
+
+            modelBuilder.Entity<User>()
+           .HasMany(D => D.Posts)
+           .WithRequired(P => P.User);
 
             //modelBuilder.Entity<User>()
             //.HasMany(D => D.Posts)
@@ -39,19 +53,16 @@ namespace FluentTest.DAL
             //    m.MapRightKey("Post_ID");
             //    m.ToTable("User_Posts");
             //});
-            modelBuilder.Entity<User>()
-            .HasMany(D => D.Posts)
-            .WithRequired(P => P.User);
 
-            modelBuilder.Entity<User>()
-               .HasMany(D => D.Requests)
-               .WithMany()
-               .Map(m =>
-               {
-                   m.MapLeftKey("Dev_ID");
-                   m.MapRightKey("Requester_ID");
-                   m.ToTable("User_Requests");
-               });
+            //modelBuilder.Entity<User>()
+            //   .HasMany(D => D.Requests)
+            //   .WithMany()
+            //   .Map(m =>
+            //   {
+            //       m.MapLeftKey("Dev_ID");
+            //       m.MapRightKey("Requester_ID");
+            //       m.ToTable("User_Requests");
+            //   });
 
         }
 
