@@ -1,0 +1,10 @@
+﻿Problem reguarding making Developer and Company unrelated (no parent class User)
+	1 - they have many common features:
+		posts - Contact Info - Address
+
+		The problem is that they can't be the same class because (a) the ContactInfo of company is a bit different from the contact info
+		of Developer,
+
+		(b) A Company Address is the same with a Developer Address so they can possibly share the same class. The same goes for Posts.
+		A tricky situation arises
+	

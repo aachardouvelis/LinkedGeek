@@ -6,7 +6,7 @@ using System.Web;
 
 namespace FluentTest.Models
 {
-    public class Post
+    public class DeveloperPost
     {
 
         public int ID { get; set; }
@@ -15,8 +15,8 @@ namespace FluentTest.Models
 
         public string Content { get; set; }
 
-        public User User { get; set; }
+        public Developer Developer { get; set; }
 
-
+        
     }
 }

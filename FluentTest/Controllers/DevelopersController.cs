@@ -33,35 +33,7 @@ namespace FluentTest.Controllers
             return View(Developers); 
         }
 
-        //public ActionResult AddFriend(int? id)
-        //{
-
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Developer developer = db.Developers.Include(i => i.Friends).Where(i => i.ID == id).Single();
-        //    var developers = db.Developers.ToList();
-        //    List<Developer> not_friends = developers.Where(D => developer.Friends.All(F => F.ID != D.ID) && D.ID!=developer.ID).ToList();// GET USERS THAT ARE NOT developer 'S FRIENDS
-
-        //    ViewBag.NotFriendsSelList = new SelectList(not_friends, "ID", "LastName", developer.ID);
-        //    UserWithNotFriends dev = new UserWithNotFriends { Developer = developer, Not_Friends = not_friends, selected_ID = -1 };
-        //    return View(dev);
-
-        //}
-
-        //[HttpPost,ActionName("AddFriend")]
-        //public ActionResult AddFriendPost(UserWithNotFriends user)
-        //{
-        //    if (user == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-
-
-
-        //    return View(user.Developer);
-        //}
+       
 
         public ActionResult ViewFeed(int? id)
         {

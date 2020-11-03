@@ -15,19 +15,28 @@ namespace FluentTest.DAL
         public DbSet<Developer> Developers { get; set; }
         public DbSet<Company> Companies { get; set; }
 
-        public DbSet<Post> Posts { get; set; }
+        public DbSet<DeveloperPost> Posts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
 
-            modelBuilder.Entity<User>()
+            modelBuilder.Entity<Company>()
             .HasMany(D => D.CompanyFollows)
             .WithMany()
             .Map(m =>
             {
-                m.MapLeftKey("User_ID");
+                m.MapLeftKey("Company_ID");
                 m.MapRightKey("Company_ID");
-                m.ToTable("CompanyFollows");
+                m.ToTable("CompanyFollowCompany");
+            });
+            modelBuilder.Entity<Developer>()
+            .HasMany(D => D.CompanyFollows)
+            .WithMany()
+            .Map(m =>
+            {
+                m.MapLeftKey("Developer_ID");
+                m.MapRightKey("Company_ID");
+                m.ToTable("DeveloperFollowCompany");
             });
 
             modelBuilder.Entity<Developer>()
@@ -37,33 +46,18 @@ namespace FluentTest.DAL
             {
                 m.MapLeftKey("Developer_ID");
                 m.MapRightKey("Developer2_ID");
-                m.ToTable("DeveloperFollows");
+                m.ToTable("DeveloperFollowDeveloper");
             });
 
-            modelBuilder.Entity<User>()
+            modelBuilder.Entity<Developer>()
            .HasMany(D => D.Posts)
-           .WithRequired(P => P.User);
+           .WithRequired(P => P.Developer);
 
-            //modelBuilder.Entity<User>()
-            //.HasMany(D => D.Posts)
-            //.WithMany()
-            //.Map(m =>
-            //{
-            //    m.MapLeftKey("Dev_ID");
-            //    m.MapRightKey("Post_ID");
-            //    m.ToTable("User_Posts");
-            //});
+            modelBuilder.Entity<Company>()
+           .HasMany(D => D.Posts)
+           .WithRequired(P => P.Company);
 
-            //modelBuilder.Entity<User>()
-            //   .HasMany(D => D.Requests)
-            //   .WithMany()
-            //   .Map(m =>
-            //   {
-            //       m.MapLeftKey("Dev_ID");
-            //       m.MapRightKey("Requester_ID");
-            //       m.ToTable("User_Requests");
-            //   });
-
+            
         }
 
 
