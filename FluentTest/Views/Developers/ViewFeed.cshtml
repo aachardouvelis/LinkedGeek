@@ -1,16 +1,16 @@
-﻿@model IEnumerable<FluentTest.ViewModels.UserPosted>
+﻿@model IEnumerable<FluentTest.Models.Post>
 @{
     ViewBag.Title = "ViewFeed";
 }
 
 <h2>ViewFeed</h2>
 
-@foreach (var userpost in Model)
+@foreach (var post in Model)
 {
 <div style="border-style:solid;border-width:1px;border-color:black;">
-    <span style="color:forestgreen">@userpost.User.FirstName @userpost.User.LastName</span>    <i>at @userpost.Post.DatePosted.ToString("yyyy/MM/dd HH:mm")</i>
+    <span style="color:forestgreen">@post.Author</span>    <i>at @post.DatePosted.ToString("yyyy/MM/dd HH:mm")</i>
     <p>
-        @userpost.Post.Content
+        @post.Content
     </p>
 </div>
 

@@ -26,8 +26,9 @@
                     CurrentPosition="Front End Software Engineer at PALIATSOS A.E.",
                     //BirthDate=new DateTime(1993,10,03,0,0,0),
                     Posts=new List<Post>{
-                        new Post
+                        new Post()
                         {
+                            ID=0,
                             DatePosted=new DateTime(2020,10,23,10,0,0),
                             Content="it hurts my feelings when people bask in a torrential downpour of trees? "
                         },

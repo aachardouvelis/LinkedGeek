@@ -13,6 +13,7 @@ namespace FluentTest.Models
         public string Name { get; set; }
 
         public CompanyContactInfo ContactInfo { get; set; }
+        [ForeignKey("Address")]
         public Address Address { get; set; }
         public virtual IList<Job> Jobs { get; set; }
         [Key]
@@ -32,7 +33,7 @@ namespace FluentTest.Models
         private IList<Company> _CompanyFollows;
 
 
-        private IList<CompanyPost> _Posts;
+        private IList<Post> _Posts;
 
         public IList<Company> CompanyFollows
         {
@@ -49,12 +50,12 @@ namespace FluentTest.Models
         }
 
       
-        public virtual IList<CompanyPost> Posts
+        public virtual IList<Post> Posts
         {
             get
             {
                 if (_Posts == null)
-                    _Posts = new List<CompanyPost>();
+                    _Posts = new List<Post>();
                 return _Posts;
             }
             set

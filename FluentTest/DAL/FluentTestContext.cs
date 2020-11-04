@@ -15,7 +15,7 @@ namespace FluentTest.DAL
         public DbSet<Developer> Developers { get; set; }
         public DbSet<Company> Companies { get; set; }
 
-        public DbSet<DeveloperPost> Posts { get; set; }
+        public DbSet<Post> Posts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

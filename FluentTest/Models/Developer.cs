@@ -29,11 +29,11 @@ namespace FluentTest.Models
         [StringLength(50)]
         public string LastName { get; set; }
         public DeveloperContactInfo ContactInfo { get; set; }
-        public DeveloperAddress Address { get; set; }
+        public Address Address { get; set; }
 
         private IList<Company> _CompanyFollows;
         private List<Developer> _DeveloperFollows;
-        private IList<DeveloperPost> _Posts;
+        private IList<Post> _Posts;
         public List<Developer> DeveloperFollows {
             get
             {
@@ -62,13 +62,13 @@ namespace FluentTest.Models
         }
 
         
-        public virtual IList<DeveloperPost> Posts
+        public virtual IList<Post> Posts
         {
             //get; set;
             get
             {
                 if (_Posts == null)
-                    _Posts = new List<DeveloperPost>();
+                    _Posts = new List<Post>();
                 return _Posts;
             }
             set

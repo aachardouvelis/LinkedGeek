@@ -43,19 +43,19 @@ namespace FluentTest.Controllers
             }
             var Dev = db.Developers.Include(i => i.Posts).Include(i => i.DeveloperFollows.Select(f => f.Posts)).Where(i => i.ID == id).Single() ;
 
-            List<UserPosted> Dev_Feed = new List<UserPosted>();
+            List<Post> Dev_Feed = new List<Post>();
             //add to Dev_Feed each individual Post with its User that makes a User's feed.
 
             //first add his own Posts
             foreach (var post in Dev.Posts)
-                Dev_Feed.Add(new UserPosted { User = Dev, Post = post });
+                Dev_Feed.Add(post);
             //Then add all of his Friend's Posts
             foreach (var friend in Dev.DeveloperFollows)
                 foreach (var post in friend.Posts)
-                    Dev_Feed.Add(new UserPosted { User = friend, Post = post });
+                    Dev_Feed.Add(post);
 
             //Order the feed by date posted..
-            Dev_Feed=Dev_Feed.OrderByDescending(P => P.Post.DatePosted).ToList();
+            Dev_Feed=Dev_Feed.OrderByDescending(P => P.DatePosted).ToList();
             return View(Dev_Feed);
         }
 
