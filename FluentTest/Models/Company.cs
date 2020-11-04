@@ -34,7 +34,7 @@ namespace FluentTest.Models
 
 
         private IList<Post> _Posts;
-
+            
         public IList<Company> CompanyFollows
         {
             get

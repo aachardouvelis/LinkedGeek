@@ -141,7 +141,6 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
-    <Compile Include="Models\CompanyContactInfo.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\DeveloperInfo.cs" />

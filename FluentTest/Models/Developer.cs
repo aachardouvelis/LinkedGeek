@@ -28,7 +28,11 @@ namespace FluentTest.Models
         public string FirstName { get; set; }
         [StringLength(50)]
         public string LastName { get; set; }
-        public DeveloperContactInfo ContactInfo { get; set; }
+
+        [DataType(DataType.PhoneNumber)]
+        public string Phone { get; set; }
+
+        public DateTime BirthDate { get; set; }
         public Address Address { get; set; }
 
         private IList<Company> _CompanyFollows;

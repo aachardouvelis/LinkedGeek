@@ -11,9 +11,6 @@ namespace FluentTest.Models
         public int ID { get;set; }
         public int DeveloperID { get; set; }
 
-        [DataType(DataType.PhoneNumber)]
-        public string Phone { get; set; }
-
-        public DateTime BirthDate { get; set; }
+        
     }
 }
